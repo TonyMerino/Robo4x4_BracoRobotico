@@ -95,9 +95,9 @@ void setup(void) {
 
 void loop() {
   while(PS4.isConnected()) {
-    //motors_control(linear_speed*multiplicador, angular_speed* multiplicador2);
-    //Multiplicador = 1.8 para aumentar a velocidade linear, o quão rápido o robô vai ser
-    //Multiplicador2 = multiplicador da curva, parâmetro que varia de 1 ate a 2.3 para suavisar as curvas em alta velocidade
+    //motors_control(linear_speed * multiplicador, angular_speed * multiplicador2);
+    //Multiplicador = para aumentar a velocidade linear, o quão rápido o robô vai ser (1.8)
+    //Multiplicador2 = multiplicador da curva, parâmetro que varia de 1 até a 2.3 para suavisar as curvas em alta velocidade
     motors_control((1.8)*PS4.LStickY(),(1.3)*PS4.RStickX());
     delay(100);
   }
